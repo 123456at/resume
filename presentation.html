@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI简历生成器 - 项目介绍</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.4.0/dist/reveal.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.4.0/dist/theme/white.css">
+  <style>
+    /* 自定义样式 */
+    .reveal {
+      font-family: "Microsoft YaHei", "Segoe UI", sans-serif;
+    }
+
+    .reveal h1, 
+    .reveal h2, 
+    .reveal h3, 
+    .reveal h4 {
+      font-family: "Microsoft YaHei", "Segoe UI", sans-serif;
+      color: #333;
+      text-shadow: none; /* 移除文字阴影 */
+    }
+
+    .reveal h1 {
+      font-size: 2.5em;
+      color: #2a76dd;
+    }
+
+    .reveal h2 {
+      font-size: 1.8em;
+      color: #3a3a3a;
+      margin-bottom: 20px; /* 减小底部边距 */
+    }
+
+    .reveal h3 {
+      font-size: 1.3em;
+      margin-bottom: 15px; /* 减小底部边距 */
+    }
+
+    .reveal ul {
+      display: block;
+      margin-left: 1.5em;
+      font-size: 0.9em; /* 减小列表文字大小 */
+    }
+
+    .reveal li {
+      margin: 0.4em 0;
+    }
+
+    .highlight {
+      color: #2a76dd;
+      font-weight: bold;
+    }
+
+    .profile-pic {
+      border-radius: 50%;
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      margin: 0 auto;
+      display: block;
+      border: 3px solid #2a76dd;
+    }
+
+    .contact-info {
+      font-size: 0.9em;
+      margin-top: 20px;
+    }
+
+    .skill-tag {
+      display: inline-block;
+      background-color: #e9f0ff;
+      color: #2a76dd;
+      padding: 5px 10px;
+      margin: 5px;
+      border-radius: 15px;
+      font-size: 0.8em;
+    }
+
+    .timeline-item {
+      margin-bottom: 1em;
+      padding-left: 1em;
+      border-left: 2px solid #2a76dd;
+    }
+
+    .timeline-date {
+      font-weight: bold;
+      color: #2a76dd;
+    }
+    
+    .screenshot {
+      max-width: 90%;
+      max-height: 70vh;
+      margin: 10px auto;
+      display: block;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    
+    .screenshot-caption {
+      text-align: center;
+      font-style: italic;
+      margin-top: 5px;
+      font-size: 0.8em;
+      color: #666;
+    }
+
+    /* 修复标题重叠问题 */
+    .reveal .slides section {
+      text-shadow: none !important;
+    }
+
+    .reveal .slides h1,
+    .reveal .slides h2,
+    .reveal .slides h3 {
+      text-shadow: none !important;
+    }
+
+    /* 解决列表前标记与文字重叠问题 */
+    .reveal ul li {
+      line-height: 1.5;
+      margin-bottom: 8px;
+      font-size: 0.9em; /* 缩小字体 */
+    }
+    
+    /* 防止幻灯片过渡时文字重叠 */
+    .reveal .slides > section,
+    .reveal .slides > section > section {
+      visibility: hidden;
+      position: absolute;
+      width: 100%;
+      opacity: 0;
+      transition: none;
+    }
+    
+    .reveal .slides > section.present,
+    .reveal .slides > section > section.present {
+      visibility: visible;
+      position: relative;
+      opacity: 1;
+      z-index: 11;
+      display: block;
+    }
+    
+    .reveal .slides > section.past,
+    .reveal .slides > section > section.past,
+    .reveal .slides > section.future,
+    .reveal .slides > section > section.future {
+      visibility: hidden;
+      opacity: 0;
+      z-index: 0;
+      display: none;
+    }
+    
+    /* 新增：通用左右布局类 */
+    .split-layout {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+    
+    .text-left {
+      flex: 1;
+      padding-right: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: left;
+    }
+    
+    .image-right {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    /* 减少段落间距 */
+    .reveal p {
+      margin-bottom: 10px;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <!-- 第一页：标题页 -->
+      <section>
+        <h1>AI简历生成器</h1>
+        <div style="text-align: center">
+          <h3>项目介绍演示文稿</h3>
+        </div>
+        <div style="text-align: center">
+          📅 2025年项目展示
+        </div>
+      </section>
+
+      <!-- 第二页：项目概述 -->
+      <section>
+        <section>
+          <h2>项目概述</h2>
+          <p>AI简历生成器是一个现代化的Web应用，帮助用户轻松创建专业简历。</p>
+          <div>
+            <span class="skill-tag">React</span>
+            <span class="skill-tag">TypeScript</span>
+            <span class="skill-tag">前端开发</span>
+            <span class="skill-tag">用户体验</span>
+          </div>
+        </section>
+        
+        <section>
+          <h2>项目特点</h2>
+          <ul>
+            <li><strong>多样化模板</strong>: 提供多种专业设计的简历模板</li>
+            <li><strong>用户友好</strong>: 直观的表单界面，轻松填写信息</li>
+            <li><strong>实时预览</strong>: 即时查看简历效果</li>
+            <li><strong>PDF导出</strong>: 一键导出高质量PDF文件</li>
+            <li><strong>用户系统</strong>: 保存多份简历并随时编辑</li>
+          </ul>
+        </section>
+      </section>
+
+      <!-- 第三页：技术架构 -->
+      <section>
+        <h2>技术架构</h2>
+        <div class="timeline-item">
+          <ul>
+            <li><strong>前端框架</strong>: React + TypeScript</li>
+            <li><strong>状态管理</strong>: React Hooks</li>
+            <li><strong>样式处理</strong>: CSS模块化</li>
+            <li><strong>PDF生成</strong>: 客户端渲染转换</li>
+            <li><strong>数据存储</strong>: 本地存储 + 后端API</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 第四页：核心功能模块 -->
+      <section>
+        <h2>核心功能模块</h2>
+        <section>
+          <h3><span class="highlight">用户模块</span></h3>
+          <div class="split-layout">
+            <div class="text-left">
+              <div class="timeline-item">
+                <ul>
+                  <li>用户注册与登录</li>
+                  <li>账户管理</li>
+                  <li>权限控制</li>
+                </ul>
+              </div>
+            </div>
+            <div class="image-right">
+              <div style="display: flex; flex-direction: column; gap: 10px; width: 90%;">
+                <img src="assets/sign in.png" alt="登录界面" class="screenshot" style="width: 100%; height: auto;">
+                <img src="assets/register.png" alt="注册界面" class="screenshot" style="width: 100%; height: auto;">
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        <section>
+          <h3><span class="highlight">简历编辑器</span></h3>
+          <div class="split-layout">
+            <div class="text-left">
+              <div class="timeline-item">
+                <ul>
+                  <li>个人信息表单</li>
+                  <li>教育背景管理</li>
+                  <li>工作经验编辑</li>
+                  <li>技能标签添加</li>
+                </ul>
+              </div>
+            </div>
+            <div class="image-right">
+              <img src="assets/create resume.png" alt="简历编辑器" class="screenshot" style="width: 90%; height: auto;">
+            </div>
+          </div>
+        </section>
+        
+        <section>
+          <h3><span class="highlight">模板引擎</span></h3>
+          <div class="split-layout">
+            <div class="text-left">
+              <div class="timeline-item">
+                <ul>
+                  <li>多种专业模板</li>
+                  <li>模板预览功能</li>
+                  <li>实时渲染</li>
+                </ul>
+              </div>
+            </div>
+            <div class="image-right">
+              <img src="assets/select template.png" alt="模板选择" class="screenshot" style="width: 90%; height: auto;">
+            </div>
+          </div>
+        </section>
+        
+        <section>
+          <h3><span class="highlight">简历管理</span></h3>
+          <div class="timeline-item">
+            <ul>
+              <li>保存多份简历</li>
+              <li>编辑历史简历</li>
+              <li>简历分类管理</li>
+            </ul>
+          </div>
+        </section>
+      </section>
+
+      <!-- 第五页：用户界面展示 -->
+      <section>
+        <h2>用户界面展示</h2>
+        <section>
+          <h3><span class="highlight">首页</span></h3>
+          <div class="split-layout">
+            <div class="text-left">
+              <div class="timeline-item">
+                <ul>
+                  <li>吸引用户的主视觉设计</li>
+                  <li>清晰的价值主张</li>
+                  <li>简单的引导操作</li>
+                </ul>
+              </div>
+            </div>
+            <div class="image-right">
+              <img src="assets/home page.png" alt="首页" class="screenshot" style="width: 90%; height: auto;">
+            </div>
+          </div>
+        </section>
+        
+        <section>
+          <h3><span class="highlight">模板选择</span></h3>
+          <div class="split-layout">
+            <div class="text-left">
+              <div class="timeline-item">
+                <ul>
+                  <li>视觉化模板展示</li>
+                  <li>适用场景说明</li>
+                  <li>模板筛选功能</li>
+                </ul>
+              </div>
+            </div>
+            <div class="image-right">
+              <img src="assets/select template.png" alt="模板选择界面" class="screenshot" style="width: 90%; height: auto;">
+            </div>
+          </div>
+        </section>
+        
+        <section>
+          <h3><span class="highlight">简历编辑器</span></h3>
+          <div class="split-layout">
+            <div class="text-left">
+              <div class="timeline-item">
+                <ul>
+                  <li>分步填写表单</li>
+                  <li>直观的添加/删除功能</li>
+                  <li>编辑建议提示</li>
+                </ul>
+              </div>
+            </div>
+            <div class="image-right">
+              <img src="assets/create resume.png" alt="简历编辑器" class="screenshot" style="width: 90%; height: auto;">
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <!-- 第六页：用户流程 -->
+      <section>
+        <h2>用户流程</h2>
+        <ol style="font-size: 0.8em; line-height: 1.3;">
+          <li><strong>注册/登录</strong> 系统</li>
+          <li><strong>选择</strong> 合适的简历模板</li>
+          <li><strong>填写</strong> 个人信息和经历</li>
+          <li><strong>预览</strong> 生成的简历效果</li>
+          <li><strong>导出</strong> PDF文件或保存到账户</li>
+          <li><strong>管理</strong> 已保存的简历</li>
+        </ol>
+      </section>
+
+      <!-- 第七页：数据结构设计 -->
+      <section>
+        <h2>数据结构设计</h2>
+        <pre><code class="typescript">
+interface ResumeData {
+  personalInfo: {
+    name: string;
+    email: string;
+    phone: string;
+    // ...其他字段
+  };
+  education: {
+    institution: string;
+    degree: string;
+    // ...其他字段
+  }[];
+  experience: {
+    company: string;
+    position: string;
+    // ...其他字段
+  }[];
+  skills: string[];
+}
+        </code></pre>
+      </section>
+
+      <!-- 第八页：技术亮点 -->
+      <section>
+        <h2>技术亮点</h2>
+        <ul>
+          <li><strong>组件化设计</strong>: 高度可复用的UI组件</li>
+          <li><strong>响应式布局</strong>: 完美适配各种设备</li>
+          <li><strong>表单状态管理</strong>: 复杂表单的优雅处理</li>
+          <li><strong>性能优化</strong>: 减少不必要的渲染</li>
+          <li><strong>用户体验</strong>: 平滑的交互和反馈</li>
+        </ul>
+      </section>
+
+      <!-- 第九页：项目价值 -->
+      <section>
+        <h2>项目价值</h2>
+        <div style="display: flex; align-items: center; justify-content: space-between;">
+          <div style="flex: 1; padding-right: 20px;">
+            <ul>
+              <li>为求职者提供专业简历制作工具</li>
+              <li>简化简历创建过程，节省时间</li>
+              <li>提升求职者的简历质量和竞争力</li>
+              <li>帮助用户管理多个职业阶段的简历</li>
+            </ul>
+          </div>
+          <div style="flex: 1; display: flex; justify-content: center;">
+            <img src="assets/home page.png" alt="项目主页" style="width: 90%; height: auto; border-radius: 5px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+          </div>
+        </div>
+      </section>
+
+      <!-- 第十页：未来规划 -->
+      <section>
+        <h2>未来规划</h2>
+        <ul>
+          <li><strong>AI辅助填写</strong>: 智能推荐内容和措辞</li>
+          <li><strong>行业模板</strong>: 针对特定行业的专业模板</li>
+          <li><strong>多语言支持</strong>: 国际化简历生成</li>
+          <li><strong>简历分析</strong>: 提供改进建议和评分</li>
+          <li><strong>ATS优化</strong>: 确保通过简历筛选系统</li>
+        </ul>
+      </section>
+
+      <!-- 第十一页：项目团队 -->
+      <section>
+        <h2>项目团队</h2>
+        <div class="timeline-item">
+          <ul>
+            <li><strong>产品经理</strong>: 负责需求分析和产品规划</li>
+            <li><strong>UI/UX设计师</strong>: 创建用户友好的界面设计</li>
+            <li><strong>前端开发</strong>: 实现交互功能和用户界面</li>
+            <li><strong>后端开发</strong>: 构建API和数据存储服务</li>
+            <li><strong>测试工程师</strong>: 确保产品质量和用户体验</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 第十二页：演示环节 -->
+      <section>
+        <h2>现场演示</h2>
+        <div class="split-layout">
+          <div class="text-left">
+            <h3>接下来将进行系统实际操作演示</h3>
+            <p>展示从注册到生成简历的完整流程</p>
+          </div>
+          <div class="image-right">
+            <img src="assets/home page.png" alt="系统首页" style="width: 90%; height: auto; border-radius: 5px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+          </div>
+        </div>
+      </section>
+
+      <!-- 第十三页：谢谢观看 -->
+      <section>
+        <h2>谢谢观看</h2>
+        <div style="text-align: center; margin-top: 2em">
+          <h3>欢迎体验我们的AI简历生成器!</h3>
+          <p>让求职变得更简单、更专业</p>
+          <p style="margin-top: 30px; font-size: 0.9em;">有问题欢迎提问</p>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.4.0/dist/reveal.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.4.0/plugin/markdown/markdown.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.4.0/plugin/highlight/highlight.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.4.0/plugin/notes/notes.js"></script>
+  <script>
+    Reveal.initialize({
+      hash: true,
+      keyboard: true,
+      controls: true,
+      progress: true,
+      center: true,
+      transition: 'none',
+      backgroundTransition: 'none',
+      viewDistance: 3,
+      disableLayout: false,
+      display: 'block',
+      overview: true,
+      fragments: true,
+      hideInactiveCursor: true,
+      hideCursorTime: 5000,
+      embedded: false,
+      help: true,
+      plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+    });
+  </script>
+</body>
+</html> 

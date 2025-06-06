@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI简历生成器 - 项目介绍</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.4.0/dist/reveal.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.4.0/dist/theme/white.css">
+  <style>
+    /* 自定义样式 */
+    .reveal {
+      font-family: "Microsoft YaHei", "Segoe UI", sans-serif;
+    }
+    
+    .reveal .slides {
+      width: 95%;
+      height: 95%;
+    }
+    
+    .reveal .slides section {
+      padding: 10px;
+    }
+
+    .reveal h1 {
+      font-size: 2.2em;
+      color: #2a76dd;
+    }
+
+    .reveal h2 {
+      font-size: 1.6em;
+      color: #3a3a3a;
+      margin-bottom: 15px;
+    }
+
+    .reveal h3 {
+      font-size: 1.2em;
+      margin-bottom: 10px;
+    }
+
+    .reveal ul, .reveal ol {
+      display: block;
+      margin-left: 1.5em;
+      font-size: 0.85em;
+    }
+
+    .reveal li {
+      margin: 0.3em 0;
+      line-height: 1.3;
+    }
+    
+    .reveal p {
+      margin-bottom: 8px;
+      font-size: 0.85em;
+    }
+    
+    .skill-tag {
+      display: inline-block;
+      background-color: #e9f0ff;
+      color: #2a76dd;
+      padding: 4px 8px;
+      margin: 4px;
+      border-radius: 12px;
+      font-size: 0.75em;
+    }
+
+    .timeline-item {
+      margin-bottom: 0.8em;
+      padding-left: 0.8em;
+      border-left: 2px solid #2a76dd;
+    }
+    
+    .highlight {
+      color: #2a76dd;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section data-markdown="resume.md"
+               data-separator="^\n---\n"
+               data-separator-vertical="^\n--\n">
+      </section>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.4.0/dist/reveal.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.4.0/plugin/markdown/markdown.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.4.0/plugin/highlight/highlight.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.4.0/plugin/notes/notes.js"></script>
+  <script>
+    Reveal.initialize({
+      hash: true,
+      keyboard: true,
+      controls: true,
+      progress: true,
+      center: true,
+      transition: 'slide',
+      width: '100%',
+      height: '100%',
+      margin: 0.05,
+      minScale: 0.5,
+      maxScale: 1.0,
+      plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+    });
+  </script>
+</body>
+</html> 

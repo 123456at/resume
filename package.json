@@ -1,0 +1,25 @@
+{
+  "name": "resume-presentation",
+  "version": "1.0.0",
+  "description": "基于 Reveal.js 的简历演示文稿",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx http-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "resume",
+    "presentation",
+    "reveal.js",
+    "markdown"
+  ],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "reveal.js": "^4.4.0"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
