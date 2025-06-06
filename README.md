@@ -1,54 +1,101 @@
-# Reveal.js 简历演示文稿
+# AI简历生成器
 
-这是一个使用 Reveal.js 创建的简历演示文稿项目。通过 Markdown 编写内容，轻松创建漂亮的幻灯片式简历。
+一个现代化的Web应用程序，帮助用户轻松创建和管理专业简历。
 
-## 功能特点
+![简历生成器预览](resume-generator/src/logo.svg)
 
-- 基于 Reveal.js 的现代化演示文稿
-- 使用 Markdown 简化内容编写
-- 响应式设计，适配不同设备
-- 自定义主题和样式
-- 垂直和水平幻灯片导航
+## 项目简介
+
+AI简历生成器是一个基于React和TypeScript的Web应用，为求职者提供了一个便捷的工具来创建、编辑和管理专业简历。通过直观的用户界面和丰富的模板选择，用户可以快速生成高质量的简历，提升求职竞争力。
+
+## 核心功能
+
+- **用户账户系统**：注册、登录和账户管理
+- **多样化简历模板**：提供多种专业设计的简历模板
+- **简历编辑器**：直观的表单界面，轻松填写个人信息、教育背景、工作经验和技能
+- **实时预览**：即时查看简历效果，所见即所得
+- **PDF导出**：一键导出高质量PDF文件
+- **简历管理**：保存多份简历并随时编辑
+
+## 技术栈
+
+- **前端框架**：React 19.1.0 + TypeScript
+- **状态管理**：React Hooks
+- **样式处理**：CSS模块化
+- **PDF生成**：html2pdf.js
+- **数据存储**：本地存储 + 后端API（计划中）
 
 ## 安装与使用
 
-1. 克隆或下载本项目
-2. 安装依赖
+1. 克隆仓库
+```bash
+git clone https://github.com/您的用户名/您的仓库名.git
+cd 您的仓库名/resume-generator
+```
 
+2. 安装依赖
 ```bash
 npm install
 ```
 
-3. 在本地运行
-
+3. 启动开发服务器
 ```bash
-npx http-server
+npm start
 ```
 
-4. 打开浏览器访问 `http://localhost:8080` 查看演示文稿
+4. 构建生产版本
+```bash
+npm run build
+```
 
-## 自定义内容
+## 项目结构
 
-- 编辑 `resume.md` 文件来更新您的简历内容
-- 修改 `css/custom.css` 来自定义样式
-- 如需添加个人照片，请放置于 `assets` 目录下并更新 Markdown 中的引用
+```
+resume-generator/
+├── public/             # 静态资源
+├── src/                # 源代码
+│   ├── components/     # React组件
+│   │   ├── AuthModal.tsx       # 认证模态框
+│   │   ├── HomePage.tsx        # 首页组件
+│   │   ├── Login.tsx           # 登录组件
+│   │   ├── Register.tsx        # 注册组件
+│   │   ├── ResumeForm.tsx      # 简历表单组件
+│   │   ├── ResumeList.tsx      # 简历列表组件
+│   │   ├── ResumePreview.tsx   # 简历预览组件
+│   │   └── TemplateSelector.tsx # 模板选择组件
+│   ├── services/       # 服务
+│   ├── types/          # TypeScript类型定义
+│   ├── App.tsx         # 应用主组件
+│   └── index.tsx       # 入口文件
+└── package.json        # 项目配置
+```
 
-## Markdown 语法说明
+## 功能展示
 
-- 使用 `---` 分隔水平幻灯片
-- 使用 `--` 分隔垂直幻灯片（嵌套在当前水平幻灯片下）
-- 使用标准 Markdown 语法编写内容
-- 可以在 Markdown 中嵌入 HTML 来实现更复杂的布局
+1. **用户登录/注册**：安全的用户认证系统
+2. **模板选择**：多种专业设计的简历模板
+3. **简历编辑**：直观的表单界面，分类填写个人信息
+4. **实时预览**：即时查看简历效果
+5. **导出PDF**：高质量PDF文件导出
 
-## 导出为 PDF
+## 未来规划
 
-要将演示文稿导出为 PDF，请按照以下步骤操作：
+- **AI辅助填写**：智能推荐内容和措辞
+- **行业模板**：针对特定行业的专业模板
+- **多语言支持**：国际化简历生成
+- **简历分析**：提供改进建议和评分
+- **ATS优化**：确保通过简历筛选系统
 
-1. 在浏览器中打开演示文稿
-2. 添加 `?print-pdf` 到 URL 末尾，例如：`http://localhost:8080?print-pdf`
-3. 使用浏览器的打印功能（Ctrl+P 或 Cmd+P）
-4. 选择"另存为 PDF"选项
+## 贡献指南
+
+欢迎贡献代码、报告问题或提出新功能建议。请遵循以下步骤：
+
+1. Fork 本仓库
+2. 创建您的特性分支 (`git checkout -b feature/amazing-feature`)
+3. 提交您的更改 (`git commit -m '添加一些特性'`)
+4. 推送到分支 (`git push origin feature/amazing-feature`)
+5. 打开一个 Pull Request
 
 ## 许可证
 
-MIT 
+本项目采用 MIT 许可证 - 详情请参阅 [LICENSE](LICENSE) 文件 
